@@ -1,5 +1,7 @@
-sudo: required
+root: required
 language: generic
+dist: xenial
+os: linux
 services:
   - docker
 
@@ -9,7 +11,7 @@ before_install:
 script:
   - docker run -e CI=true kailiu/react-test npm test
 
-after_sucess:
+after_success:
   - docker build -t kailiu/multi-client ./client
   - docker build -t kailiu/multi-nginx ./nginx
   - docker build -t kailiu/multi-server ./server
