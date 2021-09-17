@@ -1,4 +1,4 @@
-root: required
+sodu: required
 language: generic
 dist: xenial
 os: linux
@@ -29,9 +29,9 @@ deploy:
   region: 'ap-southeast-2'
   app: 'multi-docker'
   env: 'MultiDocker-env'
-  bucket_name: 'elasticbeanstalk-ap-southeast-2-428317895709'
+  bucket: 'elasticbeanstalk-ap-southeast-2-428317895709'
   bucket_path: 'docker-multi'
   on:
-    branch: master
+    branch: main
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
